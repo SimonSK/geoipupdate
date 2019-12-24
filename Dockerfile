@@ -14,8 +14,8 @@ WORKDIR /
 
 COPY --from=builder /geoipupdate/bin/geoipupdate /usr/local/bin/
 
-ADD ./conf/GeoIP.conf.default /
+ADD ./conf/GeoIP.conf.default /usr/local/etc/GeoIP.conf
 
-VOLUME ["/databases"]
+VOLUME ["/usr/local/share/GeoIP"]
 
 ENTRYPOINT ["geoipupdate"]
