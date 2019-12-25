@@ -9,6 +9,17 @@ Following changes are made to suit my needs:
 * A symlink to the newly downloaded file is created.
   * e.g. `GeoLite2-City.mmdb@ -> GeoLite2-City.mmdb-20191217T200549Z`
 
+
+## How to run
+1. Build binary: `make updater`
+2. Prepare database directory: `mkdir database`
+3. Configure: edit `conf/GeoIP.conf.default`
+4. Run: `./bin/geoipupdate -f conf/GeoIP.conf.default -d database`
+   * You may omit `-d` flag if `DatabaseDirectory` is already set in the config. 
+
+To build a Docker image: `make docker-image`
+
+
 ## Note
 * As of December 25th, 2019, downloading updates without a vaild credential still works.
   This may change in near future when MaxMind starts enforcing valid licenses.
