@@ -8,3 +8,7 @@ Following changes are made to suit my needs:
   * e.g. `GeoLite2-City.mmdb-20191217T200549Z` 
 * A symlink to the newly downloaded file is created.
   * e.g. `GeoLite2-City.mmdb@ -> GeoLite2-City.mmdb-20191217T200549Z`
+
+## Note
+* As of December 25th, 2019, downloading updates without a vaild credential still works.
+  This may change in near future when MaxMind starts enforcing valid licenses.
